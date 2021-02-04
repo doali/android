@@ -12,7 +12,13 @@ sudo apt install adb
 
 ### Settings
 
+*tcpip*
+
 ![tcpip](adb_tcpip_5555.png)
+
+*Do not forget to*
+
+![USB debugging](adb_usb_then_tcpip.png)
 
 ## `scrcpy`
 
