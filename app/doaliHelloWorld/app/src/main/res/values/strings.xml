@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">helloWorld</string>
+    <string name="app_name">TimeKeeper</string>
+    <string name="start">Button</string>
 </resources>

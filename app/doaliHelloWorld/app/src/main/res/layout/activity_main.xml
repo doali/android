@@ -6,13 +6,55 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <EditText
+        android:id="@+id/labelDuration"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="60dp"
+        android:ems="15"
+        android:inputType="date"
+        app:layout_constraintEnd_toEndOf="@+id/buttonStop"
+        app:layout_constraintTop_toBottomOf="@+id/buttonStop" />
+
+    <Button
+        android:id="@+id/buttonStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="60dp"
+        android:text="start"
+        app:layout_constraintStart_toStartOf="@+id/labelStop"
+        app:layout_constraintTop_toBottomOf="@+id/labelStop" />
+
+    <Button
+        android:id="@+id/buttonStop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="stop"
+        app:layout_constraintEnd_toEndOf="@+id/labelStop"
+        app:layout_constraintTop_toBottomOf="@+id/labelStop" />
+
+    <EditText
+        android:id="@+id/labelStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:ems="15"
+        android:inputType="date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/labelStop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="15"
+        android:inputType="date"
+        app:layout_constraintStart_toStartOf="@+id/labelStart"
+        app:layout_constraintTop_toBottomOf="@+id/labelStart" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
