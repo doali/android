@@ -26,16 +26,12 @@ public class Info
         this.stop = stop;
     }
 
-    public void setDuration(long duration) {
+    public void setDuration(final long duration) {
         this.duration = duration;
     }
 
     @Override
     public String toString() {
-        return "Info{" +
-                "start='" + start + '\'' +
-                ", stop='" + stop + '\'' +
-                ", duration=" + duration +
-                '}';
+        return "{'start':" + start + ",'stop':" + stop + ",'duration':" + duration + '}';
     }
 }
