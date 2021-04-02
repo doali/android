@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HelloWorld">
         <provider
-            android:name=".dataprovider.DataProvider"
+            android:name=".dataprovider.LogsProvider"
             android:authorities="doali.example.helloworld.info"
             android:enabled="true"
             android:exported="true"></provider>

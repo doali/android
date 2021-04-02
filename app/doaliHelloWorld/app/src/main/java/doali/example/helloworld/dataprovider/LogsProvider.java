@@ -11,9 +11,9 @@ import android.database.sqlite.SQLiteQueryBuilder;
 import android.net.Uri;
 import android.database.sqlite.SQLiteDatabase;
 
-public class DataProvider extends ContentProvider {
+public class LogsProvider extends ContentProvider {
 
-    static final String PROVIDER_NAME = "doali.example.helloworld.Info";
+    static final String PROVIDER_NAME = "doali.example.helloworld.info";
     static final String URL = "content://" + PROVIDER_NAME + "/bibi";
     public static final Uri CONTENT_URI = Uri.parse(URL);
 
@@ -30,7 +30,7 @@ public class DataProvider extends ContentProvider {
 
     private SQLiteDatabase db;
 
-    public DataProvider() {
+    public LogsProvider() {
     }
 
     @Override
@@ -63,11 +63,15 @@ public class DataProvider extends ContentProvider {
     @Override
     public boolean onCreate() {
         // TODO: Implement this to initialize your content provider on startup.
+        /*
         Context context = getContext();
         DataBaseHelper dbHelper = DataBaseHelper.init(context);
 
         db = dbHelper.getWritableDatabase();
+
         return (db == null)? false:true;
+        */
+        return false;
     }
 
     @Override

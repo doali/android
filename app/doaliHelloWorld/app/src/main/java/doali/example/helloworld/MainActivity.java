@@ -1,10 +1,9 @@
-llllllllllpackage doali.example.helloworld;
+package doali.example.helloworld;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentValues;
 import android.graphics.Color;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -14,7 +13,7 @@ import android.content.Context;
 import java.time.Duration;
 import java.time.Instant;
 
-import doali.example.helloworld.dataprovider.DataProvider;
+import doali.example.helloworld.dataprovider.LogsProvider;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -24,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
     long duration;
 
     static final String TAG = "BIBI";
-    static final DataProvider dp = new DataProvider();
+    static final LogsProvider dp = new LogsProvider();
 
     static public Info save(final String start, final String stop, final long duration) {
         Info info;
@@ -77,7 +76,9 @@ public class MainActivity extends AppCompatActivity {
                 t2 = Instant.now();
                 ((EditText) findViewById(R.id.labelStop)).setText(t2.toString());
                 duration = Duration.between(t1, t2).toMinutes();
-                ((EditText) findViewById(R.id.labelDuration)).setText("" + duration + " min");
+                String desDuration = "" + duration + " min";
+                ((EditText) findViewById(R.id.labelDuration)).setText(desDuration);
+
                 Info info = save(t1.toString(), t2.toString(), duration);
 //                ContentValues values = createValuesforDB(info);
 //                if (dp.onCreate()) {
